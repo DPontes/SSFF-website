@@ -154,10 +154,12 @@ h3 {
 }
 .hero-social {
   display: flex;
+  align-items: center;
   gap: .75rem;
   margin-top: 1.5rem;
   flex-wrap: wrap;
 }
+.hero-social .btn,
 .hero-social a {
   display: inline-flex;
   align-items: center;
@@ -170,7 +172,10 @@ h3 {
   color: #fff;
   transition: filter .2s, transform .15s;
 }
-.hero-social a:hover { filter: brightness(1.1); transform: translateY(-1px); }
+.hero-social .btn:hover,
+.hero-social a:hover { filter: brightness(1.1); transform: translateY(-1px); background: unset; }
+.hero-social .btn { background: var(--clr-primary); }
+.hero-social .btn:hover { background: var(--clr-primary); }
 .hero-social a.instagram {
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
