@@ -358,7 +358,6 @@ blockquote {
 .member-text p { color: var(--clr-muted); margin-bottom: .75rem; }
 .swish-number { font-size: 1.05rem; }
 .swish-btn {
-  display: inline-flex;
   align-items: center;
   gap: .5rem;
   margin-top: 1rem;
