@@ -235,15 +235,18 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Swish deep link — built via JS to ensure correct encoding
-    const swishData = JSON.stringify({
-      payee:   { value: "1233587516", editable: false },
-      amount:  { value: 250,          editable: true  },
-      message: { value: "Namn och klass", editable: true }
-    });
+    // Swish deep link — uses the same URL format as the official QR code
     const swishLink = document.getElementById('swish-link');
     if (swishLink) {
-      swishLink.href = 'swish://payment?data=' + encodeURIComponent(swishData);
+      const params = new URLSearchParams({
+        sw:   '1233587516',
+        amt:  '250',
+        cur:  'SEK',
+        msg:  'Namn och klass',
+        edit: 'amt,msg',
+        src:  'web'
+      });
+      swishLink.href = 'https://app.swish.nu/1/p/sw/?' + params.toString();
     }
   </script>
 
