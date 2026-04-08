@@ -187,14 +187,11 @@
       </div>
       <form
         class="kontakt-form"
-        action="https://formsubmit.co/dpontes@protonmail.com"
+        action="https://formsubmit.co/ajax/dpontes@protonmail.com"
         method="POST"
-        target="_blank"
       >
-        <!-- Disable captcha redirect -->
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_subject" value="Meddelande via SSFF-webbplatsen" />
-        <input type="hidden" name="_next" value="tack.html" />
 
         <div class="form-row">
           <div class="form-group">
@@ -234,6 +231,33 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form — AJAX submission to avoid target="_blank" POST issue
+    const kontaktForm = document.querySelector('.kontakt-form');
+    kontaktForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = kontaktForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Skickar…';
+      try {
+        const res = await fetch(kontaktForm.action, {
+          method: 'POST',
+          body: new FormData(kontaktForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          window.open('tack.html', '_blank');
+          kontaktForm.reset();
+        } else {
+          alert('Något gick fel. Försök igen eller kontakta oss direkt.');
+        }
+      } catch {
+        alert('Kunde inte skicka meddelandet. Kontrollera din internetanslutning.');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Skicka meddelande';
+      }
+    });
 
     // Scroll reveal
     const revealTargets = document.querySelectorAll(
