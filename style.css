@@ -154,18 +154,29 @@ h3 {
 }
 .hero-social {
   display: flex;
-  gap: 1.25rem;
+  gap: .75rem;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 .hero-social a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: .4rem;
-  font-size: .85rem;
-  color: var(--clr-muted);
-  transition: color .2s;
+  gap: .5rem;
+  padding: .75rem 1.75rem;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: .95rem;
+  font-weight: 700;
+  color: #fff;
+  transition: filter .2s, transform .15s;
 }
-.hero-social a:hover { color: var(--clr-primary); }
+.hero-social a:hover { filter: brightness(1.1); transform: translateY(-1px); }
+.hero-social a.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.hero-social a.facebook {
+  background: #1877f2;
+}
 
 /* decorative petals */
 .hero-decoration { position: absolute; inset: 0; pointer-events: none; }
