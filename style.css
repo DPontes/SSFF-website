@@ -152,6 +152,21 @@ h3 {
   margin-bottom: 2rem;
   color: var(--clr-text);
 }
+.hero-social {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.hero-social a {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .85rem;
+  color: var(--clr-muted);
+  transition: color .2s;
+}
+.hero-social a:hover { color: var(--clr-primary); }
+
 /* decorative petals */
 .hero-decoration { position: absolute; inset: 0; pointer-events: none; }
 .petal {
