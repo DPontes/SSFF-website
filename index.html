@@ -235,6 +235,29 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Scroll reveal
+    const revealTargets = document.querySelectorAll(
+      '.hero-inner, .om-text, .om-stats .stat, .cards .card, .event, .member-inner > *, .kontakt-text, .kontakt-form'
+    );
+
+    revealTargets.forEach(el => el.classList.add('reveal'));
+
+    // Stagger cards, stats and events
+    document.querySelectorAll('.cards .card, .om-stats .stat, .event').forEach((el, i) => {
+      el.style.transitionDelay = `${i * 0.08}s`;
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealTargets.forEach(el => observer.observe(el));
+
     // Swish deep link — uses the same URL format as the official QR code
     const swishLink = document.getElementById('swish-link');
     if (swishLink) {

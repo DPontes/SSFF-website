@@ -424,6 +424,17 @@ blockquote {
 }
 .footer-social a:hover { color: var(--clr-primary); }
 
+/* ── SCROLL REVEAL ──────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 800px) {
   .two-col,
