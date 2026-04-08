@@ -161,8 +161,8 @@
         <span class="section-label">Gå med</span>
         <h2>Bli medlem idag!</h2>
         <p>Medlemskapet är öppet för alla familjer med barn på skolan – utan krav på engagemang eller närvaro. Det rekommenderade bidraget är <strong>250 kr / familj och läsår</strong>, men valfritt belopp är välkommet.</p>
-        <p class="desktop-only">Betala enkelt via Swish – scanna QR-koden nedan. Ange ditt namn och barnets klass i meddelandet.</p>
-        <p class="mobile-only">Tryck på knappen nedan för att öppna Swish direkt. Ange ditt namn och barnets klass i meddelandefältet.</p>
+        <p class="desktop-only">Betala enkelt via Swish – scanna QR-koden nedan.</p>
+        <p class="mobile-only">Tryck på knappen nedan för att öppna Swish direkt.</p>
         <p class="swish-number">Swish: <strong>123-3587516</strong></p>
         <div class="mobile-only">
           <a id="swish-link" class="btn swish-btn">
@@ -242,8 +242,8 @@
         sw:   '1233587516',
         amt:  '250',
         cur:  'SEK',
-        msg:  'Namn och klass',
-        edit: 'amt,msg',
+        msg:  'Medlemsavgift',
+        edit: 'amt',
         src:  'web'
       });
       swishLink.href = 'https://app.swish.nu/1/p/sw/?' + params.toString();
