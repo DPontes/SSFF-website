@@ -161,10 +161,18 @@
         <span class="section-label">Gå med</span>
         <h2>Bli medlem idag!</h2>
         <p>Medlemskapet är öppet för alla familjer med barn på skolan – utan krav på engagemang eller närvaro. Det rekommenderade bidraget är <strong>250 kr / familj och läsår</strong>, men valfritt belopp är välkommet.</p>
-        <p>Betala enkelt via Swish – scanna QR-koden eller skicka till numret nedan. Ange ditt namn och barnets klass i meddelandet.</p>
+        <p class="desktop-only">Betala enkelt via Swish – scanna QR-koden nedan. Ange ditt namn och barnets klass i meddelandet.</p>
+        <p class="mobile-only">Tryck på knappen nedan för att öppna Swish direkt. Ange ditt namn och barnets klass i meddelandefältet.</p>
         <p class="swish-number">Swish: <strong>123-3587516</strong></p>
+        <a
+          class="btn swish-btn mobile-only"
+          href="swish://payment?data=%7B%22payee%22%3A%7B%22value%22%3A%221233587516%22%2C%22editable%22%3Afalse%7D%2C%22amount%22%3A%7B%22value%22%3A250%2C%22editable%22%3Atrue%7D%2C%22message%22%3A%7B%22value%22%3A%22Namn%20och%20klass%22%2C%22editable%22%3Atrue%7D%7D"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>
+          Öppna i Swish
+        </a>
       </div>
-      <div class="member-qr">
+      <div class="member-qr desktop-only">
         <img src="Images/Medlemsvgift_swish-QR-small.png" alt="Swish QR-kod för medlemsavgift" />
       </div>
     </div>
