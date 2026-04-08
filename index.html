@@ -246,7 +246,7 @@
           headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
-          window.open('tack.html', '_blank');
+          window.location.href = 'tack.html';
           kontaktForm.reset();
         } else {
           alert('Något gick fel. Försök igen eller kontakta oss direkt.');
