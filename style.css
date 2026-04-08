@@ -1,20 +1,6 @@
-/* ── FONT VARIABLES ─────────────────────────────────────────
-   Swap these two lines to match whichever Google Fonts pair
-   you uncomment in index.html
-
-   Option A – Playfair Display + Lato    (currently active)
-   Option B – Cormorant Garamond + Source Sans 3
-   Option C – DM Serif Display + DM Sans
-──────────────────────────────────────────────────────────── */
 :root {
-  --font-heading: 'Playfair Display', Georgia, serif;   /* A */
-  --font-body:    'Lato', system-ui, sans-serif;         /* A */
-
-  /* --font-heading: 'Cormorant Garamond', Georgia, serif; */  /* B */
-  /* --font-body:    'Source Sans 3', system-ui, sans-serif; */ /* B */
-
-  /* --font-heading: 'DM Serif Display', Georgia, serif; */   /* C */
-  /* --font-body:    'DM Sans', system-ui, sans-serif; */      /* C */
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
 
   /* ── Palette ── */
   --clr-bg:         #fafaf8;
@@ -33,11 +19,12 @@
 
 /* ── RESET ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.7;
+  font-weight: 400;
+  line-height: 1.5;
   color: var(--clr-text);
   background: var(--clr-bg);
 }
@@ -61,14 +48,14 @@ ul { list-style: none; }
 h2 {
   font-family: var(--font-heading);
   font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.25rem;
 }
 h3 {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.125rem;
+  font-weight: 700;
   margin-bottom: .5rem;
 }
 
@@ -147,7 +134,7 @@ h3 {
 .hero-headline {
   font-family: var(--font-heading);
   font-size: clamp(2.2rem, 6vw, 4rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
   margin-bottom: 2rem;
   color: var(--clr-text);
