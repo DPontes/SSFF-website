@@ -138,7 +138,7 @@
       <h2>Kommande aktiviteter</h2>
       <ul class="event-list">
 
-        <li class="event">
+        <li class="event" data-date="2026-05-17">
           <div class="event-date">
             <span class="event-day">17</span>
             <span class="event-month">Maj</span>
@@ -258,6 +258,19 @@
         btn.textContent = 'Skicka meddelande';
       }
     });
+
+    // Hide past events — compares data-date (YYYY-MM-DD) to today at midnight local time
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const eventSection = document.querySelector('.kommande');
+    document.querySelectorAll('.event[data-date]').forEach(el => {
+      const [y, m, d] = el.dataset.date.split('-').map(Number);
+      const eventDate = new Date(y, m - 1, d);
+      if (eventDate < today) el.remove();
+    });
+    if (eventSection && eventSection.querySelectorAll('.event').length === 0) {
+      eventSection.style.display = 'none';
+    }
 
     // Scroll reveal
     const revealTargets = document.querySelectorAll(
