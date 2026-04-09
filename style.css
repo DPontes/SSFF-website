@@ -153,6 +153,7 @@ h3 {
 .hero-social a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: .5rem;
   padding: .75rem 1.75rem;
   border-radius: var(--radius);
@@ -161,6 +162,7 @@ h3 {
   font-weight: 700;
   color: #fff;
   transition: filter .2s, transform .15s;
+  box-sizing: border-box;
 }
 .hero-social .btn:hover,
 .hero-social a:hover { filter: brightness(1.1); transform: translateY(-1px); background: unset; }
@@ -447,6 +449,14 @@ blockquote {
   .member-inner { grid-template-columns: 1fr; }
   .member-qr { justify-self: center; }
   .nav-links { gap: 1rem; }
+  .hero-social {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-social .btn,
+  .hero-social a {
+    width: 220px;
+  }
 }
 @media (max-width: 500px) {
   .form-row { grid-template-columns: 1fr; }
