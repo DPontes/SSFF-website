@@ -368,7 +368,10 @@ blockquote {
   gap: .5rem;
   margin-top: 1rem;
   background: #65B22E;
+  width: 100%;
+  max-width: 260px;
 }
+.icon-white { filter: brightness(0) invert(1); }
 @media (max-width: 767px) and (pointer: coarse) {
   .mobile-only { display: flex; justify-content: center; }
 }
