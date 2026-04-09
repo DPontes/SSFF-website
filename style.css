@@ -369,6 +369,9 @@ blockquote {
   margin-top: 1rem;
   background: #65B22E;
 }
+@media (max-width: 767px) and (pointer: coarse) {
+  .mobile-only { display: flex; justify-content: center; }
+}
 .member-qr img {
   width: 180px;
   border-radius: var(--radius);
