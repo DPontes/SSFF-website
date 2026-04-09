@@ -451,11 +451,13 @@ blockquote {
   .nav-links { gap: 1rem; }
   .hero-social {
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
   }
   .hero-social .btn,
   .hero-social a {
-    width: 220px;
+    width: 100%;
+    max-width: 260px;
   }
 }
 @media (max-width: 500px) {
