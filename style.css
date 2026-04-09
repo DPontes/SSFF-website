@@ -364,14 +364,19 @@ blockquote {
 .member-text p { color: var(--clr-muted); margin-bottom: .75rem; }
 .swish-number { font-size: 1.05rem; }
 .swish-btn {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: .5rem;
+  padding: .75rem 1.75rem;
+  font-size: .95rem;
+  font-weight: 700;
   margin-top: 1rem;
   background: #65B22E;
   width: 100%;
   max-width: 260px;
+  box-sizing: border-box;
 }
-.icon-white { filter: brightness(0) invert(1); }
 @media (max-width: 767px) and (pointer: coarse) {
   .mobile-only { display: flex; justify-content: center; }
 }
