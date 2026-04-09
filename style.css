@@ -346,7 +346,7 @@ blockquote {
 /* ── RESPONSIVE VISIBILITY ──────────────────────────────── */
 .mobile-only  { display: none; }
 .desktop-only { display: block; }
-@media (max-width: 800px) {
+@media (max-width: 767px) and (pointer: coarse) {
   .mobile-only  { display: block; }
   .desktop-only { display: none; }
 }
