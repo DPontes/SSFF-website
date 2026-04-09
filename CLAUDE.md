@@ -42,6 +42,16 @@ Static single-page website for **Skårsskolans Föräldraförening (SSFF)**. Pla
 
 Duplicate the `<li class="event">` block in the **Kommande aktiviteter** section of `index.html` and update the day, month, title, time, and description.
 
+## Build Step
+
+**There is no build step — and that is intentional.** Plain HTML/CSS is appropriate for this site's size and update frequency. Do not introduce a build tool, bundler, or framework unless one of these specific pain points arises:
+
+- **Nav/footer repeated across multiple pages** → consider Eleventy (least opinionated static site generator, keeps plain HTML/CSS, just adds templating)
+- **CSS becoming hard to maintain** → CSS custom properties are already in use; extend those before reaching for a preprocessor
+- **Performance concerns** → the site is already fast; minification would have negligible impact at this scale
+
+Until then, the build step is: `git push`.
+
 ## Deployment
 
-Push to `main` — GitHub Pages deploys automatically. No build step needed.
+Push to `main` — GitHub Pages deploys automatically.
